@@ -7,11 +7,10 @@ def getFib(n):
     prevNum = 0;
     while currentNum < n:
         currentSum = currentNum + prevNum;
-        fibList.append(currentSum);
+        if currentSum < n:
+            fibList.append(currentSum);
         prevNum = currentNum;
         currentNum = currentSum;
     return fibList;
 
 print(getFib(n));
-
-        
